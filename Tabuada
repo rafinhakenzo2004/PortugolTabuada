@@ -1,0 +1,11 @@
+Algoritmo "tabuada"
+
+var
+   N, T:inteiro
+inicio
+      escreval ("digite um número inteiro:")
+      leia (N)
+      para T <- 1 ate 10 faça
+           escreval (N, " x", T, " = ", T * N)
+      fimpara
+fimAlgoritmo
