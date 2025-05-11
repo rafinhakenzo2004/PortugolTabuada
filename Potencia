@@ -1,0 +1,18 @@
+//44.    Receba o número da base e do expoente. Calcule e mostre o valor da
+//potência.
+algoritmo "Exercício 44"
+var
+   b, ex, i, potencia: inteiro
+inicio
+   escreval("Digite o valor de b:")
+   leia(b)
+   escreval("Digite o valor de e:")
+   leia(ex)
+
+   potencia <- 1
+   para i de 1 ate ex faça
+       potencia <- potencia * b
+   fimpara
+
+   escreval("Potência: ", potencia)
+fimalgoritmo
