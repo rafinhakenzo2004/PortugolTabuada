@@ -1,0 +1,26 @@
+Algoritmo "Ex10 - Soma de múltiplos de uma matriz 8x8"
+var
+    M: vetor[1..8, 1..8] de inteiro
+    soma, l, c, i: inteiro
+inicio
+    soma <- 0  // Inicializa a soma
+    i <- 1
+    M[1, 1] <- 1
+
+    // Preenchendo a matriz com múltiplos de 2
+    para l de 1 ate 8 faca
+        para c de 2 ate 8 faca
+            M[l, c] <- i * 2
+            i <- M[l, c]
+        fimpara
+    fimpara
+
+    // Calculando a soma de todos os elementos da matriz
+    para l de 1 ate 8 faca
+        para c de 1 ate 8 faca
+            soma <- soma + M[l, c]
+        fimpara
+    fimpara
+
+    escreval("A soma da multiplicação dos números da matriz é: ", soma)
+fimalgoritmo
