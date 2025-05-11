@@ -1,0 +1,50 @@
+Algoritmo "Ex07 - Busca Binária"
+var
+    VP: inteiro
+    VT: vetor[1..20] de inteiro
+
+procedimento PreencherOrdenado(var V: vetor[1..20] de inteiro)
+var
+    i: inteiro
+inicio
+    para i de 1 ate 20 faca
+        V[i] <- i * 5  // Exemplo de vetor ordenado (5, 10, 15, ..., 100)
+    fimpara
+fimprocedimento
+
+procedimento BuscarBinaria(V: vetor[1..20] de inteiro; valor: inteiro)
+var
+    i, f, meio: inteiro
+    encontrado: booleano
+inicio
+    i <- 1
+    f <- 20
+    encontrado <- falso
+
+    enquanto i <= f e nao encontrado faca
+        meio <- (i + f) div 2
+        se V[meio] = valor entao
+            encontrado <- verdadeiro
+        senao
+            se valor < V[meio] entao
+                f <- meio - 1
+            senao
+                i <- meio + 1
+            fimse
+        fimse
+    fimenquanto
+
+    se encontrado entao
+        escreval("Valor encontrado na posição: ", meio)
+    senao
+        escreval("Valor não encontrado.")
+    fimse
+fimprocedimento
+
+inicio
+    escreval("Digite o valor a procurar:")
+    leia(VP)
+
+    PreencherOrdenado(VT)
+    BuscarBinaria(VT, VP)
+fimalgoritmo
