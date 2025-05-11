@@ -1,0 +1,36 @@
+Algoritmo "Ex09 - Preenchendo e manipulando uma matriz"
+var
+    M: vetor[1..4, 1..4] de inteiro
+    l, c, s: inteiro
+inicio
+    // Preenchendo a matriz com valores fornecidos pelo usuário
+    para l de 1 ate 4 faca
+        para c de 1 ate 4 faca
+            escreval("Escreva um número na posição ", l, ",", c, ": ")
+            leia(M[l, c])
+        fimpara
+    fimpara
+
+    // Inicializando o valor da variável s
+    s <- 1
+    M[1, 1] <- 1
+
+    // Preenchendo os elementos da matriz onde l = c
+    para l de 2 ate 4 faca
+        para c de 2 ate 4 faca
+            se l = c entao
+                M[l, c] <- s * 4
+                s <- M[l, c]
+            fimse
+        fimpara
+    fimpara
+
+    // Exibindo a matriz final
+    escreval("Matriz resultante:")
+    para l de 1 ate 4 faca
+        para c de 1 ate 4 faca
+            escreval(M[l, c], " ", fimlinha)
+        fimpara
+        escreval() // para pular linha entre as linhas da matriz
+    fimpara
+fimalgoritmo
