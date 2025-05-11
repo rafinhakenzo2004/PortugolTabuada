@@ -1,0 +1,29 @@
+//35.    Receba 2 números inteiros, verifique qual o maior entre eles. Calcule e
+//mostre o resultado da somatória dos números ímpares entre esses valores.
+algoritmo "Exercício 35"
+var
+   v1, v2, maior, menor, soma: inteiro
+inicio
+   escreval("Escreva o primeiro valor:")
+   leia(v1)
+   escreval("Escreva o segundo valor:")
+   leia(v2)
+
+   se v1 > v2 entao
+      maior <- v1
+      menor <- v2
+   senao
+      maior <- v2
+      menor <- v1
+   fimse
+
+   soma <- 0
+
+   para menor <- menor + 1 ate maior - 1 faca
+      se menor % 2 = 1 entao
+         soma <- soma + menor
+      fimse
+   fimpara
+
+   escreval("Soma dos ímpares entre os valores: ", soma)
+fimalgoritmo
