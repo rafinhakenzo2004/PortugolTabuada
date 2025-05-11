@@ -1,0 +1,37 @@
+Algoritmo "Ex04 - Média e notas acima da média"
+var
+    VT: vetor[1..30] de real
+    cta: inteiro
+    soma, M: real
+    i: inteiro
+inicio
+    soma <- 0  // Inicializando a soma
+    cta <- 0   // Inicializando o contador de notas acima da média
+
+    // Lendo as notas
+    para i de 1 ate 30 faca
+        escreval("Digite a nota ", i, ": ")
+        leia(VT[i])
+    fimpara
+
+    // Calculando a soma das notas
+    para i de 1 ate 30 faca
+        soma <- soma + VT[i]
+    fimpara
+
+    // Calculando a média
+    M <- soma / 30
+    escreval("A média do grupo é: ", M)
+
+    // Verificando quantas notas estão acima da média
+    para i de 1 ate 30 faca
+        se VT[i] > M entao
+            cta <- cta + 1
+        senao
+            escreval("A posição ", i, " está abaixo da média")
+        fimse
+    fimpara
+
+    // Exibindo a quantidade de notas acima da média
+    escreval("A quantidade de notas acima da média é: ", cta)
+fimalgoritmo
