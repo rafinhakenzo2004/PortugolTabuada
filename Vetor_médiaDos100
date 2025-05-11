@@ -1,0 +1,33 @@
+Algoritmo "EX02"
+var
+    V: vetor[1..100] de inteiro
+    i, maior, menor, soma: inteiro
+    M: real
+inicio
+    para i de 1 ate 100 faca
+        V[i] <- aleatorio(1000) + 1
+    fimpara
+
+    maior <- V[1]
+    menor <- V[1]
+
+    para i de 1 ate 100 faca
+        se V[i] > maior entao
+            maior <- V[i]
+        fimse
+        se V[i] < menor entao
+            menor <- V[i]
+        fimse
+    fimpara
+
+    escreval("O maior: ", maior)
+    escreval("O menor: ", menor)
+
+    soma <- 0
+    para i de 1 ate 100 faca 
+        soma <- soma + V[i]
+    fimpara
+
+    M <- soma / 100
+    escreval("A média é: ", M)
+fimalgoritmo
