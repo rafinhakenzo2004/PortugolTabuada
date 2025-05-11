@@ -1,0 +1,27 @@
+Algoritmo "Ex06 - Ordenar vetor com 20 elementos"
+var
+    VT: vetor[1..20] de inteiro
+    i, cta, troca: inteiro
+inicio
+    // Preenchendo o vetor com valores aleatórios
+    para i de 1 ate 20 faca
+        VT[i] <- aleatorio(1000) + 1
+    fimpara
+
+    // Ordenando o vetor (algoritmo de ordenação por seleção)
+    para i de 1 ate 19 faca
+        para cta de i + 1 ate 20 faca
+            se VT[cta] < VT[i] entao
+                troca <- VT[i]
+                VT[i] <- VT[cta]
+                VT[cta] <- troca
+            fimse
+        fimpara
+    fimpara
+
+    // Exibindo o vetor ordenado
+    escreval("Vetor ordenado:")
+    para i de 1 ate 20 faca
+        escreval(VT[i])
+    fimpara
+fimalgoritmo
